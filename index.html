@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Login Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="login-box">
+    <h1>Social Login</h1>
+
+    <p class="notice">
+      Educational login-page demonstration.
+      Not affiliated with Instagram.
+    </p>
+
+    <form id="demoForm">
+      <input
+        type="text"
+        placeholder="Demo username"
+        required
+      >
+
+      <input
+        type="password"
+        placeholder="Dummy password"
+        required
+      >
+
+      <button type="submit">Test Demo</button>
+    </form>
+
+    <p id="result">
+      Do not enter real account credentials.
+    </p>
+  </div>
+
+  <script>
+    const form = document.getElementById("demoForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      document.getElementById("result").textContent =
+        "Demo completed! No credentials were saved or transmitted.";
+
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
